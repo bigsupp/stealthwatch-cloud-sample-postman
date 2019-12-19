@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "f91d9747-bf3b-4b24-88fb-049b9336a749",
-		"name": "Stealthwatch Cloud",
+		"_postman_id": "aaa7ea0b-43f2-4925-8c3f-879644c3e6f0",
+		"name": "Stealthwatch Cloud (DevNet)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get Roles",
+			"name": "Get Alerts",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -14,19 +14,24 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://{{portal}}/api/v3/roles/role/",
+					"raw": "https://{{Portal_URL}}/api/v3/alerts/alert/",
 					"protocol": "https",
 					"host": [
-						"{{portal}}"
+						"{{Portal_URL}}"
 					],
 					"path": [
 						"api",
 						"v3",
-						"roles",
-						"role",
+						"alerts",
+						"alert",
 						""
 					]
 				}
@@ -34,7 +39,119 @@
 			"response": []
 		},
 		{
-			"name": "Get Hostname",
+			"name": "Get Notifications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{Portal_URL}}/api/v3/alerts/notifications/",
+					"protocol": "https",
+					"host": [
+						"{{Portal_URL}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"alerts",
+						"notifications",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Audit Logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{Portal_URL}}/api/v3/audit/log/",
+					"protocol": "https",
+					"host": [
+						"{{Portal_URL}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"audit",
+						"log",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blacklist Domains",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{Portal_URL}}/api/v3/blacklist/domains/",
+					"protocol": "https",
+					"host": [
+						"{{Portal_URL}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"blacklist",
+						"domains",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Watchlist Domains",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{Portal_URL}}/api/v3/watchlist/domains/",
+					"protocol": "https",
+					"host": [
+						"{{Portal_URL}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"watchlist",
+						"domains",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Hostnames",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -42,15 +159,18 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://cisco-demo.obsrvbl.com/api/v3/hostnames/all/",
+					"raw": "https://{{Portal_URL}}/api/v3/hostnames/all/",
 					"protocol": "https",
 					"host": [
-						"cisco-demo",
-						"obsrvbl",
-						"com"
+						"{{Portal_URL}}"
 					],
 					"path": [
 						"api",
@@ -64,7 +184,35 @@
 			"response": []
 		},
 		{
-			"name": "Get Flows",
+			"name": "Get Observations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://{{Portal_URL}}/api/v3/observations/all/",
+					"protocol": "https",
+					"host": [
+						"{{Portal_URL}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"observations",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Roles",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -72,15 +220,73 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "https://cisco-demo.obsrvbl.com/api/v3/snapshots/session-data/?ip=192.168.1.92&start_timestamp_utc__gte=2019-12-01T00:00:00Z&start_timestamp_utc__lt=2019-12-18T00:00:00Z",
+					"raw": "https://{{Portal_URL}}/api/v3/roles/role/",
 					"protocol": "https",
 					"host": [
-						"cisco-demo",
-						"obsrvbl",
-						"com"
+						"{{Portal_URL}}"
+					],
+					"path": [
+						"api",
+						"v3",
+						"roles",
+						"role",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flows",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "99ebb35a-7230-4795-982f-f85515d21d54",
+						"exec": [
+							"var hoursBack = 24;",
+							"",
+							"var endTime = new Date();",
+							"var startTime = new Date();",
+							"startTime.setHours(endTime.getHours() - hoursBack);",
+							"",
+							"var endTimestamp = endTime.getUTCFullYear() + \"-\" + (\"0\" + (endTime.getUTCMonth() + 1)).slice(-2) + \"-\" + (\"0\" + (endTime.getUTCDate())).slice(-2) + \"T\" + (\"0\" + (endTime.getUTCHours())).slice(-2) + \":\" + (\"0\" + (endTime.getUTCMinutes())).slice(-2) + \":\" + (\"0\" + (endTime.getUTCSeconds())).slice(-2) + \"Z\";",
+							"var startTimestamp = startTime.getUTCFullYear() + \"-\" + (\"0\" + (startTime.getUTCMonth() + 1)).slice(-2) + \"-\" + (\"0\" + (startTime.getUTCDate())).slice(-2) + \"T\" + (\"0\" + (startTime.getUTCHours())).slice(-2) + \":\" + (\"0\" + (startTime.getUTCMinutes())).slice(-2) + \":\" + (\"0\" + (startTime.getUTCSeconds())).slice(-2) + \"Z\";",
+							"",
+							"postman.setEnvironmentVariable(\"end-timestamp\", endTimestamp);",
+							"postman.setEnvironmentVariable(\"start-timestamp\", startTimestamp);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{Portal_URL}}/api/v3/snapshots/session-data/?start_timestamp_utc__gte={{start-timestamp}}&start_timestamp_utc__lt={{end-timestamp}}",
+					"protocol": "https",
+					"host": [
+						"{{Portal_URL}}"
 					],
 					"path": [
 						"api",
@@ -91,135 +297,13 @@
 					],
 					"query": [
 						{
-							"key": "ip",
-							"value": "192.168.1.92"
-						},
-						{
 							"key": "start_timestamp_utc__gte",
-							"value": "2019-12-01T00:00:00Z"
+							"value": "{{start-timestamp}}"
 						},
 						{
 							"key": "start_timestamp_utc__lt",
-							"value": "2019-12-18T00:00:00Z"
+							"value": "{{end-timestamp}}"
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Alerts",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://cisco-demo.obsrvbl.com/api/v3/alerts/alert/",
-					"protocol": "https",
-					"host": [
-						"cisco-demo",
-						"obsrvbl",
-						"com"
-					],
-					"path": [
-						"api",
-						"v3",
-						"alerts",
-						"alert",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Alert Update",
-			"request": {
-				"method": "PATCH",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"new_comment\": \"Closing via API 2\",\r\n\"resolved\": true,\r\n\"merit\": 9\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://cisco-demo.obsrvbl.com/api/v3/alerts/alert/2724/?",
-					"protocol": "https",
-					"host": [
-						"cisco-demo",
-						"obsrvbl",
-						"com"
-					],
-					"path": [
-						"api",
-						"v3",
-						"alerts",
-						"alert",
-						"2724",
-						""
-					],
-					"query": [
-						{
-							"key": "resolved",
-							"value": "true",
-							"disabled": true
-						},
-						{
-							"key": "merit",
-							"value": "8",
-							"disabled": true
-						},
-						{
-							"key": "new_comment",
-							"value": "Alert Closed via API",
-							"disabled": true
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Alert Delete",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://{{portal}}/api/v3/alerts/alert/{{alertid}}/",
-					"protocol": "https",
-					"host": [
-						"{{portal}}"
-					],
-					"path": [
-						"api",
-						"v3",
-						"alerts",
-						"alert",
-						"{{alertid}}",
-						""
 					]
 				}
 			},
@@ -231,7 +315,7 @@
 		"apikey": [
 			{
 				"key": "value",
-				"value": "",
+				"value": "ApiKey {{API_User}}:{{API_Key}}",
 				"type": "string"
 			},
 			{
@@ -262,5 +346,6 @@
 				]
 			}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
