@@ -1,6 +1,6 @@
-# stealthwatch-cloud-sample-postmanStealthwatch Cloud API Postman Samples
-Stealthwatch Cloud API Postman Samples
-This repository contains sample Postman collections related to Cisco Stealthwatch Cloud APIs. It is available for use by the Cisco DevNet community through Code Exchange. For more information on the Stealthwatch Enterprise REST API, please see the following link: https://developer.cisco.com/docs/stealthwatch
+#Stealthwatch Cloud API Postman Samples
+
+This repository contains sample Postman collections related to Cisco Stealthwatch Cloud APIs. It is available for use by the Cisco DevNet community through Code Exchange. 
 
 Compatibility
 There is no minimum version required as this is a hosted product.
