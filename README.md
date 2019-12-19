@@ -1,4 +1,4 @@
-#S tealthwatch Cloud API Postman Samples
+# Stealthwatch Cloud API Postman Samples
 
 This repository contains sample Postman collections related to Cisco Stealthwatch Cloud APIs. It is available for use by the Cisco DevNet community through Code Exchange. 
 
@@ -20,10 +20,6 @@ To the right of this dropdown (in the top-right corner of Postman), click the gr
 Type - API Key
 Key - Authorization
 Value - API Key generated from your portal. 
-
-
-Known issues
-# No known issues.
 
 # Getting help
 Use this project at your own risk (support not provided). If you need technical support with Cisco Stealthwatch APIs, do one of the following:
