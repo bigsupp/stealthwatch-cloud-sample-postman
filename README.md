@@ -17,7 +17,7 @@ Select the Stealthwatch Cloud - DevNet environment from the dropdown in the top-
 To the right of this dropdown (in the top-right corner of Postman), click the graphic of the gear to edit the Postman environment.  AT A MINIMUM YOU WILL WANT TO SET THE PORTAL NAME IN THE ENVIRONMENT.
 
 # Please set the following fields appropriately:
-Portal keys are generated in your portal, select the User icon, then "your settings", the view or if needed, generate API credentials.
+Portal keys are generated in your portal, select the User icon, then "your settings", then view or if needed, generate API credentials.
 
 In Postman - Type = "API Key", Key = "Authorization", Value = API Key generated from your portal.
 
@@ -28,7 +28,7 @@ Use this project at your own risk (support not provided). If you need technical 
 Check out our forum to pose a question or to see if any questions have already been answered by our community. We monitor these forums on a best effort basis and will periodically post answers.
 
 # Open A Case
-Email support@obsrvbl.com 
+Email support@obsrvbl.com
 
 Licensing info
 This code is licensed under the BSD 3-Clause License. See LICENSE for details.
