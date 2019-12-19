@@ -1,11 +1,11 @@
-#Stealthwatch Cloud API Postman Samples
+#S tealthwatch Cloud API Postman Samples
 
 This repository contains sample Postman collections related to Cisco Stealthwatch Cloud APIs. It is available for use by the Cisco DevNet community through Code Exchange. 
 
-Compatibility
+# Compatibility
 There is no minimum version required as this is a hosted product.
 
-Installation
+# Installation
 Ensure Postman is installed.
 To download and install Postman, please visit https://www.getpostman.com.
 Download the Postman collections and environment files.
@@ -16,22 +16,22 @@ Ensure the Postman collections and environment have been imported.
 Select the Stealthwatch Enterprise - DevNet environment from the dropdown in the top-right corner of Postman.
 To the right of this dropdown (in the top-right corner of Postman), click the graphic of the gear to edit the Postman environment.
 
-Please set the following fields appropriately:
-API Key
+# Please set the following fields appropriately:
+Type - API Key
 Key - Authorization
 Value - API Key generated from your portal. 
 
 
 Known issues
-No known issues.
+# No known issues.
 
-Getting help
+# Getting help
 Use this project at your own risk (support not provided). If you need technical support with Cisco Stealthwatch APIs, do one of the following:
 
-Browse the Forum
+# Browse the Forum
 Check out our forum to pose a question or to see if any questions have already been answered by our community. We monitor these forums on a best effort basis and will periodically post answers.
 
-Open A Case
+# Open A Case
 To open a case by web: http://www.cisco.com/c/en/us/support/index.html
 To open a case by email: tac@cisco.com
 For phone support: 1-800-553-2447 (U.S.)
